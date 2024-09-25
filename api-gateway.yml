@@ -19,16 +19,10 @@ spring:
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
             - Path=/api/v1/user/**, /api/v1/group/**
-          filters:
-            - RemoveRequestHeader=Cookie 
-            - TokenRelay 
         - id: task-service
           uri: lb://TASK-SERVICE
           predicates:
             - Path=/api/v1/task/**
-          filters:
-            - RemoveRequestHeader=Cookie 
-            - TokenRelay 
         - id: keycloak-admin-client-swagger-docs
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
