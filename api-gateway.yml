@@ -23,12 +23,13 @@ spring:
             - Path=/v3/api-docs/keycloak-admin-client
           filters:
             - RewritePath=/v3/api-docs/keycloak-admin-client, /v3/api-docs
-         - id: task-service-swagger-docs
+        - id: task-service-swagger-docs
           uri: lb://TASK-SERVICE
           predicates:
             - Path=/v3/api-docs/task-service
           filters:
             - RewritePath=/v3/api-docs/task-service, /v3/api-docs
+
 springdoc:
   swagger-ui:
     oauth:
