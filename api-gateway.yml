@@ -1,12 +1,6 @@
 spring:
   application:
     name: api-gateway
-  security:
-    oauth2:
-      resource-server:
-        jwt:
-          issuer-uri: http://localhost:8080/realms/Mini-Project
-          jwk-set-uri: http://localhost:8080/realms/Mini-Project/protocol/openid-connect/certs
   main:
     web-application-type: reactive
   cloud:
