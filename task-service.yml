@@ -19,7 +19,7 @@ spring:
   resilience4j:
   circuitbreaker:
     instances:
-      cardServiceCircuitBreaker:
+        taskServiceCircuitBreaker:
         register-health-indicator: true
         automatic-transition-from-open-to-half-open-enabled: true
         failure-rate-threshold: 50
